@@ -2,6 +2,8 @@ import "./app.css";
 import React, { Component } from "react";
 import Habits from "./components/habits";
 import Navbar from "./components/navbar";
+import Button1 from "./postcss/button1";
+import Button2 from "./postcss/button2";
 
 class App extends Component {
   state = {
@@ -56,17 +58,8 @@ class App extends Component {
   render() {
     return (
       <>
-        <Navbar
-          totalCount={this.state.habits.filter((item) => item.count > 0).length}
-        />
-        <Habits
-          habits={this.state.habits}
-          onIncrement={this.handleIncrement}
-          onDecrement={this.handleDecrement}
-          onDelete={this.handleDelete}
-          onAdd={this.handleAdd}
-          onReset={this.handleReset}
-        />
+        <Button1 />
+        <Button2 />
       </>
     );
   }
